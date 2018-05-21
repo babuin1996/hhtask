@@ -18,7 +18,9 @@ class CommentsController extends Controller
     {
         $comments=DB::table('comments')->get();
 
-        return View::make('main')->with(array('comments'=>$comments));
+        $commentIndex=0;
+        return View::make('start')->with(array('comments'=>$comments, $commentIndex));
+
     }
 
     /**
@@ -39,16 +41,18 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
+        if(isset($request)){
         $comment = new Comment();
         $comment->author = $request->author;
         $comment->email = $request->email;
         $comment->text = $request->text;
 
         $comment->save();
-        
+        }
         $comments=DB::table('comments')->get();
-
-        return View::make('comments')->with(array('comments'=>$comments));
+        
+        $commentIndex=0;
+        return View::make('comments')->with(array('comments'=>$comments, $commentIndex));
     }
 
     /**
@@ -59,10 +63,7 @@ class CommentsController extends Controller
      */
     public function show(Comment $comment)
     {
-        $comments=DB::table('comments')->get();
-
-        return View::make('comments')->with(array('comments'=>$comments));
-
+       //
     }
 
     /**

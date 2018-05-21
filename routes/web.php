@@ -18,5 +18,3 @@ Route::get('/welcome', function () {
 Route::get('/', 'CommentsController@index');
   
 Route::post('/post', 'CommentsController@store');
-
-Route::get('/show', 'CommentsController@show');
