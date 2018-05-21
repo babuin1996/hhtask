@@ -5,6 +5,7 @@
 
 <div class="row">
     <?php $i = 0; ?>
+
     @foreach($comments as $comment)
         <div class="col-lg-4 mb-4">
             
@@ -25,8 +26,8 @@
           </div>
         </div>
     <?php $i++; ?>
-    @endforeach 
-    
+    @endforeach
+
 </div>
 
 @endsection

@@ -68,28 +68,28 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="col-md-12" style="color:#ffffff">
            <div class='container'>
-            <form action="{{ url('/comment') }}" id='createform' role="form" method="post" onsubmit="return false" > <!-- onsubmit="return false" -->
+            <form action="{{ url('/comment') }}" id='createform' method="post" onsubmit="return false" > <!-- onsubmit="return false" -->
             <div class="row">    
              <div class="col-md-6">
               <div class="form-group">
-               <label>Name <text style="color:red">*</text></label>
+               <label>Name</label> <b style="color:red">*</b>
                <input type="text" name='author' class="form-control" id="author" placeholder="Name">
-               <small id="fileHelp" class="form-text text-muted">Maximum 20 symbols</small>
+               <small id="nameHelp" class="form-text text-muted">Maximum 20 symbols</small>
                <p class="help-block">Example: "Simon"</p>
               </div>
              
              <div class="form-group">
-               <label>Email <text style="color:red">*</text></label>
+               <label>Email</label> <b style="color:red">*</b>
                <input type="text" name='email' class="form-control" id="email" placeholder="Email">
-               <small id="fileHelp" class="form-text text-muted">Maximum 20 symbols</small>
+               <small id="emailHelp" class="form-text text-muted">Maximum 20 symbols</small>
                <p class="help-block">Example: "simon1969@gmail.com"</p>             
               </div>
              </div>
              <div class="col-md-6">
               <div class="form-group">
-               <label>Comment text <text style="color:red">*</text></label>
+               <label>Comment text</label> <b style="color:red">*</b>
                <textarea class="form-control" rows="7" id="text" name="text"></textarea>
-               <small id="fileHelp" class="form-text text-muted">Maximum 200 symbols</small>
+               <small id="commentHelp" class="form-text text-muted">Maximum 200 symbols</small>
                <p class="help-block">Example: "This morning I heard some weird noises under my bed..."</p>  
               </div>
                  
